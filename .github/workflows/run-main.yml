@@ -1,12 +1,14 @@
-name: Run main.py and test Supabase
+# .github/workflows/run-main.yml
+
+name: Run main.py with Secrets
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches: [main]  # or 'master' if you're still using that
+  workflow_dispatch:  # allows manual trigger from GitHub UI
 
 jobs:
-  run:
+  run-script:
     runs-on: ubuntu-latest
 
     env:
@@ -18,7 +20,7 @@ jobs:
       PREDICTION_API_URL: ${{ secrets.PREDICTION_API_URL }}
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -28,29 +30,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: ✅ Test Supabase DB connection
-        run: |
-          python -c "
-import psycopg2, os
-try:
-    conn = psycopg2.connect(
-        host=os.getenv('SUPABASE_HOST'),
-        dbname=os.getenv('SUPABASE_DB'),
-        user=os.getenv('SUPABASE_USER'),
-        password=os.getenv('SUPABASE_PASSWORD'),
-        port=os.getenv('SUPABASE_PORT'),
-        sslmode='require'
-    )
-    with conn.cursor() as cur:
-        cur.execute('SELECT NOW();')
-        print('✅ Supabase connection successful:', cur.fetchone())
-    conn.close()
-except Exception as e:
-    print('❌ Supabase DB connection failed:', e)
-    raise
-"
-
       - name: Run main.py
-        run: python main.py
+        run: |
+          python main.py
