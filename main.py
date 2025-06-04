@@ -69,7 +69,7 @@ st.markdown("""
         font-size: 1.1em;
     }
     .block-container {
-        max-width: 950px;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
         padding-top: 2rem;
