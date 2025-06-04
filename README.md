@@ -147,12 +147,8 @@ SUPABASE_PORT=5432
 <h2>👤 Author</h2>
 <p>
   <strong>Othniel Obasi</strong><br>
-  AI Product Engineer | NLP & ML Solutions | Streamlined Deployment<br>
-  <a href="https://linkedin.com/in/othniel-obasi" target="_blank">LinkedIn</a> | 
   <a href="https://github.com/othnielObasi" target="_blank">GitHub</a>
 </p>
 
 <hr>
 
-<h2>📄 License</h2>
-<p>This project is licensed under the MIT License.</p>
