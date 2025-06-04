@@ -20,22 +20,43 @@ API_ENDPOINT = os.getenv("PREDICTION_API_URL")
 # Set up page config to ensure it's wide and the title is set
 st.set_page_config(page_title="MNIST Digit Classifier", layout="wide")
 
-# Header styling
+# # Header styling
+# st.markdown("""
+# <style>
+#     .main-title {
+#         text-align: left;
+#         margin-bottom: 0px;
+#     }
+#     .description {
+#         text-align: left;
+#         width: 60%;
+#     }
+# </style>
+# """, unsafe_allow_html=True)
+
+# st.markdown("<h1 class='main-title'>🧠 MNIST Digit Classifier</h1>", unsafe_allow_html=True)
+# st.markdown("<p class='description'>Draw a digit (0–9) below and click Predict.</p>", unsafe_allow_html=True)
+
+
 st.markdown("""
 <style>
     .main-title {
         text-align: left;
-        margin-bottom: 0px;
+        margin-bottom: 0.5em;
+        font-size: 2.2em;
     }
     .description {
         text-align: left;
-        width: 60%;
+        margin-top: 0.5em;
+        font-size: 1.1em;
     }
 </style>
 """, unsafe_allow_html=True)
 
 st.markdown("<h1 class='main-title'>🧠 MNIST Digit Classifier</h1>", unsafe_allow_html=True)
 st.markdown("<p class='description'>Draw a digit (0–9) below and click Predict.</p>", unsafe_allow_html=True)
+
+
 
 canvas_col, result_col = st.columns([1, 0.9], gap="small")
 
