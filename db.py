@@ -4,8 +4,10 @@ from psycopg2.extras import RealDictCursor
 from datetime import datetime
 from dotenv import load_dotenv
 
-# Load environment variables from .env
-load_dotenv()
+# Load environment variables from .env only when running locally
+if os.getenv("GITHUB_ACTIONS") != "true":
+    from dotenv import load_dotenv
+    load_dotenv()
 
 # Fetch DB credentials
 USER = os.getenv("SUPABASE_USER")
