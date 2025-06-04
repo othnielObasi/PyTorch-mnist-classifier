@@ -38,6 +38,23 @@ st.set_page_config(page_title="MNIST Digit Classifier", layout="wide")
 # st.markdown("<p class='description'>Draw a digit (0–9) below and click Predict.</p>", unsafe_allow_html=True)
 
 
+# st.markdown("""
+# <style>
+#     .main-title {
+#         text-align: center;
+#         margin-bottom: 0.5em;
+#         width: 80%;
+#         font-size: 2.2em;
+#     }
+#     .description {
+#         text-align: left;
+#         margin-top: 0.5em;
+#         font-size: 1.1em;
+#     }
+# </style>
+# """, unsafe_allow_html=True)
+
+# ==== Custom Styles ====
 st.markdown("""
 <style>
     .main-title {
@@ -50,6 +67,12 @@ st.markdown("""
         text-align: left;
         margin-top: 0.5em;
         font-size: 1.1em;
+    }
+    .block-container {
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2rem;
     }
 </style>
 """, unsafe_allow_html=True)
