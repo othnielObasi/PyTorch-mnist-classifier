@@ -43,7 +43,7 @@ st.markdown("""
     .main-title {
         text-align: center;
         margin-bottom: 0.5em;
-        width: 60%;
+        width: 80%;
         font-size: 2.2em;
     }
     .description {
