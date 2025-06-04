@@ -8,9 +8,14 @@ import os
 from dotenv import load_dotenv
 from db import log_prediction, get_recent_predictions
 
-# Load environment variables
-load_dotenv()
+# Load .env only locally (not in GitHub Actions)
+if os.getenv("GITHUB_ACTIONS") != "true":
+    from dotenv import load_dotenv
+    load_dotenv()
+
+# Use API URL from environment variable (GitHub or local)
 API_ENDPOINT = os.getenv("PREDICTION_API_URL")
+
 
 # Set up page config to ensure it's wide and the title is set
 st.set_page_config(page_title="MNIST Digit Classifier", layout="wide")
