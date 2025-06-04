@@ -130,7 +130,8 @@ SUPABASE_PORT=5432
   <li>Quantized to INT8 using PyTorch</li>
   <li>Exported as TorchScript (<code>.pt</code>)</li>
   <li>Loaded with <code>torch.jit.load()</code> for fast inference</li>
-  <li>Inference time: &lt; 1 ms (fbgemm engine)</li>
+  <li>Inference time: &lt; 500 ms (fbgemm engine)</li>
+  <li>UI Link: https://pytorch-mnist-classifier.streamlit.app</li>li>
 </ul>
 
 <hr>
