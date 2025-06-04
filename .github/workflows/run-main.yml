@@ -1,4 +1,4 @@
-name: Run main.py and test Supabase
+name: Run MNIST App
 
 on:
   push:
@@ -18,19 +18,19 @@ jobs:
       PREDICTION_API_URL: ${{ secrets.PREDICTION_API_URL }}
 
     steps:
-      - name: Checkout code
+      - name: ✅ Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: pip install -r requirements.txt
 
-      - name: ✅ Test Supabase DB connection
+      - name: 🧪 Test DB Connection
         run: python test_db.py
 
-      - name: ▶️ Run main.py
+      - name: ▶️ Run main script (optional in CI)
         run: python main.py
