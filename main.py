@@ -41,7 +41,7 @@ st.set_page_config(page_title="MNIST Digit Classifier", layout="wide")
 st.markdown("""
 <style>
     .main-title {
-        text-align: left;
+        text-align: center;
         margin-bottom: 0.5em;
         font-size: 2.2em;
     }
