@@ -18,7 +18,7 @@ API_ENDPOINT = os.getenv("PREDICTION_API_URL")
 
 
 # Set up page config to ensure it's wide and the title is set
-st.set_page_config(page_title="MNIST Digit Classifier", layout="wide")
+st.set_page_config(page_title="PyTorch MNIST Digit Classifier", layout="wide")
 
 
 # ==== Custom Styles ====
@@ -44,7 +44,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 class='main-title'>🧠 MNIST Digit Classifier</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='main-title'>🧠 PyTorch MNIST Digit Classifier</h1>", unsafe_allow_html=True)
 st.markdown("<p class='description'>Draw a digit (0–9) below and click Predict.</p>", unsafe_allow_html=True)
 
 
