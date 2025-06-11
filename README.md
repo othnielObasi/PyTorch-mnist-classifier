@@ -51,7 +51,7 @@
 <h2>⚙️ Local Setup</h2>
 
 <h3>1. Clone and install dependencies</h3>
-<pre><code>git clone https://github.com/your-username/PyTorch-mnist-classifier.git
+<pre><code>git clone https://github.com/othnielObasi/PyTorch-mnist-classifier.git
 cd PyTorch-mnist-classifier
 python -m venv venv
 source venv/bin/activate
